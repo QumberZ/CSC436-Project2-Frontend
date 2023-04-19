@@ -24,12 +24,18 @@ const CreatePage = () => {
   return (
     <>
     
+    <div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="animate-charcter"> Create a New Post</h3>
+    </div>
+  </div>
+</div>
       <main>
-        <h1>Create a New Post</h1>
         {error && <div className="alert alert-danger">{error}</div>}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="title">Title:</label>
+            <label className="text-content" htmlFor="title">Title:</label>
             <input
               type="text"
               id="title"
@@ -42,7 +48,7 @@ const CreatePage = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="content">Content:</label>
+            <label className="text-content" htmlFor="content">Content:</label>
             <textarea
               id="content"
               name="content"
@@ -58,12 +64,11 @@ const CreatePage = () => {
            
           </div>
           <button type="submit" className="btn btn-primary">
+            
             Save
           </button>
         </form>
-        <br />
-        <br />
-        
+     
       </main>
 
     </>
