@@ -2,21 +2,18 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
 import "./Posts.css";
-import DeletePosts from "./DeletePosts"
+import DeletePosts from "./DeletePosts";
 import EditPost from "./EditPost";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
-import SendIcon from "@mui/icons-material/Send";
 import Stack from "@mui/material/Stack";
-import EditIcon from '@mui/icons-material/Edit';
+import EditIcon from "@mui/icons-material/Edit";
 
 const Posts = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [postData, setPostData] = useState([]);
   const [editingPost, setEditingPost] = useState(null);
-
-
 
   const fetchAPIData = async () => {
     setLoading(true);
@@ -40,7 +37,7 @@ const Posts = () => {
     setEditingPost(post);
   };
 
-    const handleDeletePost = async (postId) => {
+  const handleDeletePost = async (postId) => {
     try {
       await DeletePosts(postId);
       const updatedPostData = postData.filter((post) => post.id !== postId);
@@ -73,13 +70,13 @@ const Posts = () => {
 
   return (
     <>
-     <div className="container">
-  <div className="row">
-    <div className="col-md-12 text-center">
-      <h3 className="animate-charcter"> View Posts</h3>
-    </div>
-  </div>
-</div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <h3 className="animate-charcter"> View Posts</h3>
+          </div>
+        </div>
+      </div>
       <div className="container align-center">
         {postData.map((post) => {
           const lastUpdated = moment(post.updatedAt).format(
@@ -119,7 +116,12 @@ const Posts = () => {
                       >
                         Edit
                       </Button>
-                      <Button variant="outlined" startIcon={<DeleteIcon />}onClick={() => handleDeletePost(post.id)}>
+                      <Button
+                        variant="contained"
+                        startIcon={<DeleteIcon />}
+                        onClick={() => handleDeletePost(post.id)}
+                        style={{ backgroundColor: "red" }}
+                      >
                         Delete
                       </Button>
                     </Stack>
