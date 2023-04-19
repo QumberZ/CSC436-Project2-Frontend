@@ -4,7 +4,9 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer>
-      <p>&copy; 2023 My Blog. All rights reserved.</p>
+        <strong>
+      <p>&copy; 2023 Qumber and Ali Blog Site. All rights reserved.</p>
+      </strong>
     </footer>
   );
 };
