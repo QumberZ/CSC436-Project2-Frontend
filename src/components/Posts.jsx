@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
 import "./Posts.css";
+import DeletePosts from "./DeletePosts"
 import EditPost from "./EditPost";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -14,6 +15,8 @@ const Posts = () => {
   const [error, setError] = useState(null);
   const [postData, setPostData] = useState([]);
   const [editingPost, setEditingPost] = useState(null);
+
+
 
   const fetchAPIData = async () => {
     setLoading(true);
@@ -35,6 +38,16 @@ const Posts = () => {
 
   const handleEditPost = (post) => {
     setEditingPost(post);
+  };
+
+    const handleDeletePost = async (postId) => {
+    try {
+      await DeletePosts(postId);
+      const updatedPostData = postData.filter((post) => post.id !== postId);
+      setPostData(updatedPostData);
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   const handlePostUpdate = (updatedPost) => {
@@ -106,7 +119,7 @@ const Posts = () => {
                       >
                         Edit
                       </Button>
-                      <Button variant="outlined" startIcon={<DeleteIcon />}>
+                      <Button variant="outlined" startIcon={<DeleteIcon />}onClick={() => handleDeletePost(post.id)}>
                         Delete
                       </Button>
                     </Stack>
