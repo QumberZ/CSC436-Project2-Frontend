@@ -73,10 +73,10 @@ const Posts = () => {
 
   return (
     <>
-     <div class="container">
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <h3 class="animate-charcter"> View Posts</h3>
+     <div className="container">
+  <div className="row">
+    <div className="col-md-12 text-center">
+      <h3 className="animate-charcter"> View Posts</h3>
     </div>
   </div>
 </div>

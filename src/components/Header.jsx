@@ -2,9 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 
+import logo from '../assets/blog-logo.png'
+
 const Header = () => {
   return (
     <header>
+         <img src={logo} alt="Blog Logo" className="logo"/> 
       <nav>
         <ul>
           <li>

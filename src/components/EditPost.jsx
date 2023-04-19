@@ -4,6 +4,12 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import './Modal.css'; 
+import DeleteIcon from "@mui/icons-material/Delete";
+import SendIcon from "@mui/icons-material/Send";
+import Stack from "@mui/material/Stack";
+import EditIcon from '@mui/icons-material/Edit';
+
 
 const style = {
   position: 'absolute',
@@ -70,9 +76,11 @@ const EditPost = ({ post, onUpdate, onClose }) => {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
-            <Box sx={style}>
+            <Box sx={style} >
               <Typography id="modal-modal-title" variant="h6" component="h2">
+                <strong>
                 Edit Post
+                </strong>
               </Typography>
               <div className="modal-body">
                 {error && <div className="alert alert-danger">{error}</div>}
@@ -82,17 +90,24 @@ const EditPost = ({ post, onUpdate, onClose }) => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="content">Content</label>
-                  <textarea id="content" className="form-control" value={content} onChange={handleContentChange}></textarea>
+                  <textarea id="content"  value={content} onChange={handleContentChange}></textarea>
                 </div>
               </div>
-              <div className="modal-footer">
-                <button className="btn btn-primary" disabled={saving} onClick={handleSave}>
-                  {saving ? 'Saving...' : 'Save'}
-                </button>
-                <button className="btn btn-secondary" onClick={handleCancel}>
-                  Cancel
-                </button>
-              </div>
+               <Stack direction="row" spacing={23}>
+                      <Button
+                       className="btn btn-primary" 
+                       disabled={saving} 
+                       onClick={handleSave}
+                        variant="contained"
+                        endIcon={<EditIcon />}
+                      >
+
+                         {saving ? 'Saving...' : 'Save'}
+                      </Button>
+                      <Button variant="outlined" onClick={handleCancel} startIcon={<DeleteIcon />}>
+                        Delete
+                      </Button>
+                    </Stack>     
             </Box>
           </Modal>
         </div>
