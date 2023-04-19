@@ -107,6 +107,7 @@ const CreatePost = () => {
               Content:
             </label>
             <textarea
+              type="text"
               id="content"
               name="content"
               className="form-control"

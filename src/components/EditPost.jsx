@@ -79,12 +79,12 @@ const EditPost = ({ post, onUpdate, onClose }) => {
           >
             <Box sx={style}>
               <Typography id="modal-modal-title" variant="h6" component="h2">
-                <strong>Edit Post</strong>
+                <strong className="text">Edit Post</strong>
               </Typography>
               <div className="modal-body">
                 {error && <div className="alert alert-danger">{error}</div>}
                 <div className="form-group">
-                  <label htmlFor="title">Title</label>
+                  <label className="text" htmlFor="title">Title</label>
                   <input
                     type="text"
                     id="title"
@@ -94,7 +94,7 @@ const EditPost = ({ post, onUpdate, onClose }) => {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="content">Content</label>
+                  <label className="text" htmlFor="content">Content</label>
                   <textarea
                     id="content"
                     value={content}

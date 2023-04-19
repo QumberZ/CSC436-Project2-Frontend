@@ -29,7 +29,8 @@
     input[type="url"],
     textarea {
       padding: 10px;
-      border: 1px solid #54add0;
+      border: 1px solid rgb(84, 136, 219);
+      color: rgb(84, 136, 219);
       border-radius: 30px;
       width: 100%;
       margin-bottom: 20px;
@@ -71,5 +72,5 @@
 
 .text-content{
 
-    color: #324ba3;
+    color:rgb(84, 136, 219);
 }
