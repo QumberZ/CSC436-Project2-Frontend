@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import './CreatePosts.css'
+import Header from "./Header";
 
 const CreatePage = () => {
   const [title, setTitle] = useState("");
@@ -15,7 +16,6 @@ const CreatePage = () => {
     try {
       const response = await axios.post(URL, { title, content, image });
       console.log(response.data);
-      // redirect to the post page
     } catch (e) {
       setError("Error: " + e.message);
     }
@@ -23,6 +23,7 @@ const CreatePage = () => {
 
   return (
     <>
+    
       <main>
         <h1>Create a New Post</h1>
         {error && <div className="alert alert-danger">{error}</div>}
@@ -54,21 +55,15 @@ const CreatePage = () => {
             ></textarea>
           </div>
           <div className="form-group">
-            <label htmlFor="image">Image URL:</label>
-            <input
-              type="url"
-              id="image"
-              name="image"
-              className="form-control"
-              value={image}
-              onChange={(event) => setImage(event.target.value)}
-              placeholder="Enter an image URL"
-            />
+           
           </div>
           <button type="submit" className="btn btn-primary">
             Save
           </button>
         </form>
+        <br />
+        <br />
+        
       </main>
 
     </>

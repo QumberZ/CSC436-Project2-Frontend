@@ -14,12 +14,12 @@ const Header = () => {
           </li>
           <li>
             <NavLink to="/create" className="nav-link" activeClassName="active-nav-link">
-              Create
+              Create Post
             </NavLink>
           </li>
           <li>
             <NavLink to="/posts" className="nav-link" activeClassName="active-nav-link">
-              Blog
+              Blog Posts
             </NavLink>
           </li>
         </ul>

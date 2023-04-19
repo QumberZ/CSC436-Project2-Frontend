@@ -1,16 +1,17 @@
 footer {
     background-color: #f2f2f2;
+    color: #110e0e;
     padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .main-content {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin-top: 60px; /* Set to the height of the header */
+    margin-top: 60px;
+    margin-bottom: 50px;
   }
   
