@@ -24,10 +24,10 @@ const CreatePage = () => {
   return (
     <>
     
-    <div class="container">
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <h3 class="animate-charcter"> Create a New Post</h3>
+    <div className="container">
+  <div className="row">
+    <div className="col-md-12 text-center">
+      <h3 className="animate-charcter"> Create a New Post</h3>
     </div>
   </div>
 </div>
@@ -56,7 +56,7 @@ const CreatePage = () => {
               value={content}
               onChange={(event) => setContent(event.target.value)}
               placeholder="Write your post here"
-              rows="8"
+              rows="4"
               required
             ></textarea>
           </div>
