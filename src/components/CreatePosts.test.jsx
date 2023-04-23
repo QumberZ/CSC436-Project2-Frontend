@@ -5,8 +5,7 @@
 
 import React from "react";
 import { render, screen } from "@testing-library/react";
-//import { describe, test } from '@jest/globals';
-//import { it } from "@jest/globals";
+
 import '@testing-library/jest-dom';
 import CreatePage from "./CreatePosts";
 
