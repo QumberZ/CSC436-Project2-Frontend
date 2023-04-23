@@ -53,7 +53,7 @@ const CreatePost = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 text-center">
-            <h3 className="animate-charcter"> Create a New Post</h3>
+            <h3 className="animate-charcter" data-testid="create-post-header"> Create a New Post</h3>
           </div>
         </div>
       </div>
