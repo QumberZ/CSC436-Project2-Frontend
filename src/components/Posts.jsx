@@ -63,7 +63,7 @@ const Posts = () => {
     return (
       <>
         <p>Data Here: {JSON.stringify(postData)}</p>
-        <h3 className="text-center p-4"> Loading... </h3>
+        <h3 className="text-center p-4" > Loading... </h3>
       </>
     );
   }
@@ -73,7 +73,7 @@ const Posts = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 text-center">
-            <h3 className="animate-charcter"> View Posts</h3>
+            <h3 className="animate-charcter" > View Posts</h3>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@ const Posts = () => {
               <div className="col-sm-6 py-3 top">
                 <div className="card width-m py-2 top post-card">
                   <div className="card-body">
-                    <h3 className="font-bold card-title top">
+                    <h3 className="font-bold card-title top" >
                       Title: {post.title}
                     </h3>
                     <p className="card-text">
